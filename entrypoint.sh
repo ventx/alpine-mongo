@@ -1,4 +1,7 @@
 #!/bin/sh
+echo "info"
+echo $1
+echo $@
 
 [ "$1" = "mongod" ] || exec "$@" || exit $?
 
@@ -33,4 +36,4 @@ fi
 mongod --shutdown
 
 cmd="$@"
-exec /bin/sh -c mongod "$cmd"
+exec /bin/sh -c "$cmd"
