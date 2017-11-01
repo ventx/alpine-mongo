@@ -33,4 +33,4 @@ fi
 mongod --shutdown
 
 cmd="$@"
-exec /bin/sh -c "$cmd"
+exec /bin/sh -c mongod "$cmd"
